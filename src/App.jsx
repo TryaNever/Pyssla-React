@@ -1,35 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {useState} from 'react'
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    return (
+        <>
+            <div className={`bg-black w-full h-screen text-white flex justify-between`}>
+                <div className={`w-1/5 border-r-2 border-white`}>
+                    <button>Nouveau dessin</button>
+                    <form>
+                        <label htmlFor="search">Recherche</label>
+                        <input type="search" name="search" id="search"/>
+                    </form>
+                </div>
+                <div className={`w-full grid grid-cols-12 gap-6 pt-10 pl-10`}>
+                    <div className={`col-span-3`}>
+                        <img src="" alt=""/>
+                        <div><strong>Title</strong><p>Date de Création</p></div>
+                    </div>
+                    <div className={`col-span-3 h-60 border border-white rounded-lg p-3`}>
+                        <img src="" alt=""/>
+                        <div><strong>Title</strong><p>Date de Création</p></div>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
 }
 
 export default App
