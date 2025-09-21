@@ -1,11 +1,13 @@
 import {useState} from 'react'
+import PopupCreation from "./components/PopupCreation.jsx";
 
 function App() {
+    const [isPopupOpen, setIsPopupOpen] = useState(false)
     return (
         <>
             <div className={`bg-black w-full h-screen text-white flex justify-between`}>
                 <div className={`w-1/5 border-r-2 border-white`}>
-                    <button>Nouveau dessin</button>
+                    <button onClick={() => setIsPopupOpen(true) }>Nouveau dessin</button>
                     <form>
                         <label htmlFor="search">Recherche</label>
                         <input type="search" name="search" id="search"/>
@@ -22,6 +24,7 @@ function App() {
                     </div>
                 </div>
             </div>
+            {isPopupOpen && <PopupCreation onClose={() => setIsPopupOpen(false)} />}
         </>
     )
 }
