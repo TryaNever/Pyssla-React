@@ -3,6 +3,7 @@ import PopupCreation from "./components/PopupCreation.jsx";
 
 function App() {
     const [isPopupOpen, setIsPopupOpen] = useState(false)
+
     return (
         <>
             <div className={`bg-black w-full h-screen text-white flex justify-between`}>
